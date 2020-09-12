@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>CREATOR</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Taskname</label>
+        <input type="text" class="form-control" name="taskname" placeholder="taskname" value="{{employee.taskname}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>TASK DESCRIPTION</label>
+            <input type="text" class="form-control" name="taskdescription" placeholder="taskdescription" value="{{employee.taskdescription}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Duration</label>
+            <input type="text" class="form-control" name="duration" placeholder="duration" value="{{employee.duration}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form> 
